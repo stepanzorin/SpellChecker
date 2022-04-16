@@ -88,9 +88,7 @@ void Dictionary::Search(std::string& word) {
     }
 }
 
-
-
-int Dictionary::min3(const int n1, const  int n2, const  int n3) {
+uint16_t Dictionary::min3(const uint16_t n1, const uint16_t n2, const uint16_t n3) {
     int ans = n1;
     if (n2 < ans)
         ans = n2;
@@ -99,7 +97,7 @@ int Dictionary::min3(const int n1, const  int n2, const  int n3) {
     return ans;
 }
 
-int Dictionary::m(const char a, const  char b) {
+uint16_t Dictionary::m(const char a, const  char b) {
     if (a == b)
         return 0;
     else
@@ -107,20 +105,20 @@ int Dictionary::m(const char a, const  char b) {
 }
 
 uint16_t Dictionary::dist(const std::string& word, const std::string& dictionary_word) {
-    int l1 = word.length();
-    int l2 = dictionary_word.length();
+    uint16_t l1 = word.length();
+    uint16_t l2 = dictionary_word.length();
 
-    std::vector<int> current_row(l2 + 1);
-    std::vector<int> previous_row(l2 + 1);
+    std::vector<uint16_t> current_row(l2 + 1);
+    std::vector<uint16_t> previous_row(l2 + 1);
 
-    for (int j = 0; j <= l2; j++)
+    for (uint16_t j = 0; j <= l2; j++)
         current_row[j] = j;
 
-    for (int i = 1; i <= l1; i++) {
+    for (uint16_t i = 1; i <= l1; i++) {
         previous_row = current_row;
         current_row[0] = i;
-        for (int j = 1; j <= l2; j++) {
-            int temp1, temp2, temp3;
+        for (uint16_t j = 1; j <= l2; j++) {
+            uint16_t temp1, temp2, temp3;
             temp1 = previous_row[j] + 1;
             temp2 = current_row[j - 1] + 1;
             temp3 = previous_row[j - 1] + m(word[i - 1], dictionary_word[j - 1]);
@@ -130,4 +128,11 @@ uint16_t Dictionary::dist(const std::string& word, const std::string& dictionary
     }
 
     return current_row[l2];
+}
+
+
+
+Dictionary::~Dictionary() {
+    data.clear();
+    std::cout << std::endl;
 }
