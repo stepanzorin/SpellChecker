@@ -134,5 +134,4 @@ uint16_t Dictionary::dist(const std::string& word, const std::string& dictionary
 
 Dictionary::~Dictionary() {
     data.clear();
-    std::cout << std::endl;
 }
