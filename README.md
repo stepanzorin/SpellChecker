@@ -8,18 +8,31 @@ _____
 
 ## Solution
 ### 1. Idea
-For beginning, I have created a class which I named as Dictionory. I decided to create the next hash-table in the class.
+For beginning, I have created a class which is named as Dictionory. I decided to create hash-table powered by "Chain method" in the class. 
  
 ![изображение](https://user-images.githubusercontent.com/81780915/163655415-a97f0b21-d585-4afa-99f7-a63f515e1606.png)
 
+### 2. Process of searching
+
+In this step I remembered about Levenshtein distance.
+**Levenshtein distance** — *is a string metric for measuring the difference between two sequences. Informally, the Levenshtein distance between two words is the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other.* (c) Wiki
+
+![изображение](https://user-images.githubusercontent.com/81780915/163739948-f208f4f6-df3c-4bc5-a486-c8bc397ca89f.png)
+
+With Levenshtein distance I can implement Search method. Besides, the method involves multithreading because of dictionary and text size might be big enough and might add the performance issues.
 
 ## Result:
 
 ### First block: words for dictionary;
-### Second block: wront text;
+===
+### Second block: wrong text;
+===
 ### Third block: result;
 
 ![изображение](https://user-images.githubusercontent.com/81780915/163655781-29325d22-54a5-4386-8e78-0cb7adfd1846.png)
+
+## P.S. 
+I deliberately hadn't used templates because some companies hate the metaprogramming. I chose neutral side. I know what is templates and even variadic templates. 
 
 
 
