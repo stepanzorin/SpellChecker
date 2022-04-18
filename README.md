@@ -23,7 +23,7 @@ In this step I remembered about Levenshtein distance.
 
 With Levenshtein distance I can implement Search method. Besides, the method involves multithreading because of dictionary and text size might be big enough and might add the performance issues.
 
-![изображение](https://user-images.githubusercontent.com/81780915/163741660-240bf333-dc58-404b-9a93-5169fcf95a0f.png)
+![изображение](https://user-images.githubusercontent.com/81780915/163742137-4769d00d-80b8-414e-8e40-74cb38ed40ac.png)
 
 ## Result:
 
