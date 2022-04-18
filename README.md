@@ -12,6 +12,7 @@ For beginning, I have created a class which is named as Dictionory. I decided to
  
 ![изображение](https://user-images.githubusercontent.com/81780915/163655415-a97f0b21-d585-4afa-99f7-a63f515e1606.png)
 
+
 ### 2. Process of searching
 
 In this step I remembered about Levenshtein distance.
@@ -19,7 +20,10 @@ In this step I remembered about Levenshtein distance.
 
 ![изображение](https://user-images.githubusercontent.com/81780915/163739948-f208f4f6-df3c-4bc5-a486-c8bc397ca89f.png)
 
+
 With Levenshtein distance I can implement Search method. Besides, the method involves multithreading because of dictionary and text size might be big enough and might add the performance issues.
+
+![изображение](https://user-images.githubusercontent.com/81780915/163741660-240bf333-dc58-404b-9a93-5169fcf95a0f.png)
 
 ## Result:
 
@@ -30,6 +34,7 @@ With Levenshtein distance I can implement Search method. Besides, the method inv
 ### Third block: result;
 
 ![изображение](https://user-images.githubusercontent.com/81780915/163655781-29325d22-54a5-4386-8e78-0cb7adfd1846.png)
+
 
 ## P.S. 
 I deliberately hadn't used templates because some companies hate the metaprogramming. I chose neutral side. I know what is templates and even variadic templates. 
