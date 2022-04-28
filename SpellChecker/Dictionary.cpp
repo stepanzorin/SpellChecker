@@ -37,36 +37,60 @@ void Dictionary::Search(std::string& word) {
             std::string sorted_word = word;
             std::sort(sorted_word.begin(), sorted_word.end());
 
-            if (dist(sorted_word, dictionary_word.first) <= 1) {
+
+            if (word == dictionary_word.second) {
+                matched_words.push_back(dictionary_word.second);
+                return;
+            }
+
+            else if (dist(sorted_word, dictionary_word.first) <= 1) {
+                matched_words.push_back(dictionary_word.second);
+            }
+
+            else if (dist(word, dictionary_word.second) <= 1) {
                 matched_words.push_back(dictionary_word.second);
             }
         }
-        });
+    });
 
     std::thread th2([&] {
         for (const auto dictionary_word : data[word.length() + 1]) {
             std::string sorted_word = word;
             std::sort(sorted_word.begin(), sorted_word.end());
 
-            if (dist(sorted_word, dictionary_word.first) <= 1) {
+            if (word == dictionary_word.second) {
+                matched_words.push_back(dictionary_word.second);
+            }
+
+            else if (dist(sorted_word, dictionary_word.first) <= 1) {
+                matched_words.push_back(dictionary_word.second);
+            }
+
+            else if (dist(word, dictionary_word.second) <= 1) {
                 matched_words.push_back(dictionary_word.second);
             }
         }
-        });
+    });
 
     for (const auto dictionary_word : data[word.length() - 1]) {
         std::string sorted_word = word;
         std::sort(sorted_word.begin(), sorted_word.end());
 
-        if (dist(sorted_word, dictionary_word.first) <= 1) {
+        if (word == dictionary_word.second) {
+            matched_words.push_back(dictionary_word.second);
+        }
+
+        else if (dist(sorted_word, dictionary_word.first) <= 1) {
+            matched_words.push_back(dictionary_word.second);
+        }
+
+        else if (dist(word, dictionary_word.second) <= 1) {
             matched_words.push_back(dictionary_word.second);
         }
     }
 
     th1.join();
     th2.join();
-    th1.~thread();
-    th2.~thread();
 
     if (matched_words.empty()) {
         word = "{" + word + "?}";
@@ -134,4 +158,5 @@ uint16_t Dictionary::dist(const std::string& word, const std::string& dictionary
 
 Dictionary::~Dictionary() {
     data.clear();
+    std::cout << std::endl;
 }
