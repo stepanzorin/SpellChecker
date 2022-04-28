@@ -1,4 +1,4 @@
-# CQG — SpellChecker
+# SpellChecker
 _____
 ## Task: 
 ![изображение](https://user-images.githubusercontent.com/81780915/163655001-d5dd3f05-e8c0-4248-8272-6dc75912f42d.png)
@@ -33,7 +33,7 @@ With Levenshtein distance I can implement Search method. Besides, the method inv
 ===
 ### Third block: result;
 
-![изображение](https://user-images.githubusercontent.com/81780915/163655781-29325d22-54a5-4386-8e78-0cb7adfd1846.png)
+![изображение](https://user-images.githubusercontent.com/81780915/165657791-b538c5fa-bd9a-4aa7-83d3-ef448bf03382.png)
 
 
 ## P.S. 
